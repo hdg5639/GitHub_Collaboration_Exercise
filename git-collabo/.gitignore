@@ -6,7 +6,7 @@ build/
 !**/src/test/**/build/
 
 # env
-shop.env
+src/main/resources/shop.env
 *.env
 
 ### STS ###
