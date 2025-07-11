@@ -2,7 +2,7 @@ package km.likelion.gitcollabo.order;
 
 import jakarta.persistence.*;
 import km.likelion.gitcollabo.order.dto.OrderDTO;
-import km.likelion.gitcollabo.product.productEntity;
+import km.likelion.gitcollabo.product.ProductEntity;
 import km.likelion.gitcollabo.user.UserEntity;
 import lombok.*;
 
@@ -37,7 +37,7 @@ public class OrderEntity {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    private productEntity product;
+    private ProductEntity product;
 
     public OrderDTO toDTO() {
         return OrderDTO.builder()

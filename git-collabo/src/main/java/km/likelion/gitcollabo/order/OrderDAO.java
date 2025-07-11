@@ -2,7 +2,7 @@ package km.likelion.gitcollabo.order;
 
 import km.likelion.gitcollabo.order.dto.CreateOrderDTO;
 import km.likelion.gitcollabo.order.dto.OrderDTO;
-import km.likelion.gitcollabo.product.productRepository;
+import km.likelion.gitcollabo.product.ProductRepository;
 import km.likelion.gitcollabo.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class OrderDAO {
     private final OrderRepository orderRepository;
-    private final productRepository productRepository;
+    private final ProductRepository productRepository;
     private final UserRepository userRepository;
 
     //주문 번호 생성
