@@ -33,7 +33,7 @@ public class OrderController {
     }
 
     @PutMapping("/status-change")
-    public ResponseEntity<OrderDTO> changeOrderStatus(Long orderId, OrderStatus orderStatus) {
+    public ResponseEntity<OrderDTO> changeOrderStatus(@RequestParam Long orderId, @RequestParam OrderStatus orderStatus) {
         OrderDTO orderDTO = orderService.changeOrderStatus(orderId, orderStatus);
         return ResponseEntity.ok(orderDTO);
     }
