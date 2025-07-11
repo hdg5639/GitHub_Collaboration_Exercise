@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class productEntity {
+public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,8 +25,8 @@ public class productEntity {
     @Column(nullable = false)
     private ProductCategory productCategory;
 
-    public productDTO toDTO() {
-        return productDTO.builder()
+    public ProductDTO toDTO() {
+        return ProductDTO.builder()
                 .id(id)
                 .productName(productName)
                 .productPrice(productPrice)
