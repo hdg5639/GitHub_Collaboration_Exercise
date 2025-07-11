@@ -13,7 +13,7 @@ import lombok.*;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private Long id;
 
     @Column
     private String userName;
@@ -26,7 +26,7 @@ public class UserEntity {
 
     public UserDTO toDTO() {
         return UserDTO.builder()
-                .userId(userId)
+                .id(id)
                 .userName(userName)
                 .email(email)
                 .password(password)
