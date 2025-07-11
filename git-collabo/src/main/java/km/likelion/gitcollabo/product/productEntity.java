@@ -13,16 +13,16 @@ import lombok.*;
 public class productEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private String productId;
 
     @Column(nullable = false)
-    private String name;
+    private String productName;
 
     @Column(nullable = false)
-    private Long price;
+    private Long productPrice;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String category;
+    private String productCategory;
 
 }
