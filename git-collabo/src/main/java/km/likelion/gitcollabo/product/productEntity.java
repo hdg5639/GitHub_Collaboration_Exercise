@@ -23,6 +23,14 @@ public class productEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String productCategory;
+    private ProductCategory productCategory;
 
+    public productDTO toDTO() {
+        return productDTO.builder()
+                .id(id)
+                .productName(productName)
+                .productPrice(productPrice)
+                .productCategory(productCategory)
+                .build();
+    }
 }

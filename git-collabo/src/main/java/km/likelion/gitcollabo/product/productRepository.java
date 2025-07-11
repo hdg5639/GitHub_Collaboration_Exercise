@@ -1,4 +1,6 @@
 package km.likelion.gitcollabo.product;
 
-public interface productRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface productRepository extends JpaRepository<productEntity, String> {
 }
